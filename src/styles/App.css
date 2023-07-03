@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.cv-contents {
+  flex: 20 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-container {
+  flex: 1 0 auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container button {
+  width: 4rem;
+}
