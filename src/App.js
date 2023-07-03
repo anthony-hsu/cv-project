@@ -11,9 +11,7 @@ class App extends Component {
             <button>Edit</button>
             <button>Submit</button>
           </div>
-          <div className="cv-contents">
-            <CVForm />
-          </div>
+          <CVForm className="cv-contents"/>
         </form>
       </div>
     );

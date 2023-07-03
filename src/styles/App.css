@@ -6,12 +6,17 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin: 0 20%;
 }
 
 .cv-contents {
   flex: 20 0 auto;
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
+  padding: 2rem;
+  justify-content: flex-start;
+  gap: 5rem;
 }
 
 .buttons-container {
@@ -24,4 +29,26 @@
 
 .buttons-container button {
   width: 4rem;
+}
+
+#form-general {
+  display: flex;
+  flex-direction: column;
+}
+
+#general-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input:hover {
+  background-color: lightcyan;
+  border-radius: 2px;
 }

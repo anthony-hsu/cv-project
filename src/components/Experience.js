@@ -3,7 +3,14 @@ import React, { Component } from 'react'
 class Experience extends Component {
   render() {
     return (
-      <div>Experience</div>
+      <>
+        <form>
+            <h3>Experience</h3>
+            <input 
+                type="text"
+            />
+        </form>
+      </>
     )
   }
 }

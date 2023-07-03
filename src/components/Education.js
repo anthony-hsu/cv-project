@@ -3,7 +3,12 @@ import React, { Component } from 'react'
 class Education extends Component {
   render() {
     return (
-      <div>Education</div>
+      <>
+        <form>
+            <h3>Education</h3>
+            <input type="text"></input>
+        </form>
+      </>
     )
   }
 }
