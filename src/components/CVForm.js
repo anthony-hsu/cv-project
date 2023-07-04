@@ -8,7 +8,6 @@ class CVForm extends Component {
       super(props)
     
       this.state = {
-         
       }
     }
     

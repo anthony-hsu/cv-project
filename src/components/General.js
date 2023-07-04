@@ -23,7 +23,7 @@ class General extends Component {
               <input 
                 type="text"
                 value={this.state.phone}
-                readOnly="true"
+                readOnly={true}
               />
             </div>
             <div>
@@ -31,7 +31,7 @@ class General extends Component {
               <input 
                 type="text"
                 value={this.state.email}
-                readOnly="true"
+                readOnly={true}
               />
             </div>
           </div>
