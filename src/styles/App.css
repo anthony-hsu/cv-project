@@ -43,12 +43,19 @@
   gap: 1rem;
 }
 
-input {
-  border: none;
-  border-bottom: 1px solid black;
-}
-
-input:hover {
+.editMode:hover {
   background-color: lightcyan;
   border-radius: 2px;
+}
+
+.submittedMode {
+  border: none;
+  color: black;
+  background-color: white;
+  border-bottom: 1px solid white;
+}
+
+.editMode {
+  border: none;
+  border-bottom: 1px solid black;
 }

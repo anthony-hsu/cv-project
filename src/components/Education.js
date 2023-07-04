@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 class Education extends Component {
   render() {
+    const {editMode} = this.props;
+    const mode = editMode ? "editMode" : "submittedMode";
     return (
       <>
         <form>

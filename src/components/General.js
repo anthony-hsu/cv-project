@@ -10,7 +10,18 @@ class General extends Component {
       email: "anthhsu@gmail.com",
     };
   }
+
+  onInputChange = (e) => {
+    this.setState(
+        {
+            [e.target.name]: e.target.value,
+        }
+    )
+  }
+
   render() {
+    const {editMode} = this.props;
+    const mode = editMode ? "editMode" : "submittedMode";
     return (
       <>
         <form id="form-general">
@@ -22,16 +33,22 @@ class General extends Component {
               <label>Phone Number: </label>
               <input 
                 type="text"
+                name="phone"
                 value={this.state.phone}
-                readOnly={true}
+                onChange={this.onInputChange}
+                className={mode}
+                disabled={!editMode}
               />
             </div>
             <div>
               <label>Email: </label>
               <input 
                 type="text"
+                name="email"
                 value={this.state.email}
-                readOnly={true}
+                onChange={this.onInputChange}
+                className={mode}
+                disabled={!editMode}
               />
             </div>
           </div>
