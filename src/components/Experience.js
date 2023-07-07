@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ExperienceItem from "./ExperienceItem";
 
 class Experience extends Component {
   constructor(props) {
@@ -13,14 +14,8 @@ class Experience extends Component {
       <>
         <form>
           <h3>Experience</h3>
-          <label>Title: </label>
-          <input
-            type="text"
-            // value={this.state.phone}
-            // onChange={this.onInputChange}
-            className={mode}
-            disabled={!editMode}
-          />
+          <ExperienceItem editMode={editMode} />
+          
         </form>
       </>
     );

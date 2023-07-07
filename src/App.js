@@ -13,10 +13,6 @@ class App extends Component {
     this.setEditMode = this.setEditMode.bind();
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log(this.state);
-  }
-
   btnEditClick = () => {
     this.setEditMode(true);
   }
