@@ -12,9 +12,9 @@ class CVForm extends Component {
     }
     
   render() {
-    const {className, editMode} = this.props;
+    const {editMode} = this.props;
     return (
-      <div className={className}>
+      <div className="cv-contents">
         <General editMode={editMode} />
         <Experience editMode={editMode} />
         <Education editMode={editMode} />

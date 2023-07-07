@@ -6,6 +6,7 @@ class ExperienceItem extends Component {
     super(props);
 
     this.state = {
+      company: "Quorum",
       role: "Software Engineer",
       start: "08/2016",
       end: "Present",
@@ -25,14 +26,24 @@ class ExperienceItem extends Component {
       <>
         <div className="exp-item-wrapper">
           <div className="task-wrapper">
-            <input
-              className={`input-exp-title ${mode}`}
-              type="text"
-              name="role"
-              value={this.state.role}
-              onChange={this.onInputChange}
-              disabled={!editMode}
-            />
+            <div className="task-info-wrapper">
+              <input
+                className={`input-exp-company ${mode}`}
+                type="text"
+                name="company"
+                value={this.state.company}
+                onChange={this.onInputChange}
+                disabled={!editMode}
+              />
+              <input
+                className={`input-exp-title ${mode}`}
+                type="text"
+                name="role"
+                value={this.state.role}
+                onChange={this.onInputChange}
+                disabled={!editMode}
+              />
+            </div>
             <ExperienceItemTasks editMode={editMode} />
           </div>
           <div className="date-wrapper">
@@ -54,7 +65,7 @@ class ExperienceItem extends Component {
               disabled={!editMode}
             />
           </div>
-        </div>        
+        </div>
       </>
     );
   }

@@ -14,9 +14,9 @@
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  padding: 2rem;
+  padding: 5rem;
   justify-content: flex-start;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .buttons-container {
@@ -65,12 +65,21 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  margin: 2rem 0;
 }
 
 .task-wrapper {
   flex: 4 0 auto;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.task-info-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -97,6 +106,11 @@
   flex: 1 0 auto;
 }
 
+.input-exp-company {
+  flex: 1 0 auto;
+  font-weight: bold;
+}
+
 .input-exp-desc {
   width: 100%;
 }
@@ -121,8 +135,4 @@
 
 ul {
   margin: 0;
-}
-
-.btn-add {
-
 }

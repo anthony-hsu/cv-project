@@ -35,9 +35,7 @@ class App extends Component {
             <button onClick={() => this.btnEditClick()}>Edit</button>
             <button onClick={() => this.btnSubmitClick()}>Submit</button>
           </div>
-          <CVForm 
-            className="cv-contents" 
-            editMode={this.state.editMode}/>
+          <CVForm editMode={this.state.editMode}/>
         </div>
       </div>
     );
