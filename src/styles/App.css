@@ -125,14 +125,40 @@
 
 .date-start {
   text-align: right;
-  width: 4rem;
+  width: 5rem;
 }
 
 .date-end {
   text-align: left;
-  width: 4rem;
+  width: 5rem;
 }
 
 ul {
   margin: 0;
+}
+
+.ed-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+
+.ed-info-wrapper {
+  flex: 6 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.input-school {
+  flex: 1 0 auto;
+  font-weight: bold;
+}
+
+.input-major {
+  flex: 1 0 auto;
 }

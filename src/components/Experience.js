@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ExperienceItem from "./ExperienceItem";
-import uniqid from 'uniqid';
+import uniqid from "uniqid";
 
 class Experience extends Component {
   constructor(props) {
@@ -9,8 +9,8 @@ class Experience extends Component {
     this.state = {
       experienceItems: [
         {
-          id: uniqid(),  
-        }
+          id: uniqid(),
+        },
       ],
     };
   }
@@ -21,7 +21,6 @@ class Experience extends Component {
       experienceItems: [...prevState.experienceItems, { id: uniqid() }],
     }));
   };
-  
 
   render() {
     const { editMode } = this.props;
@@ -30,10 +29,16 @@ class Experience extends Component {
         <form>
           <h3>Experience</h3>
           {this.state.experienceItems.map((item) => {
-            return <ExperienceItem id={item.id} editMode={editMode} />
-          })}                  
+            return <ExperienceItem key={item.id} editMode={editMode} />;
+          })}
         </form>
-        {!editMode ? <></> : <button className="btn-add" onClick={this.addTask}>+</button>}
+        {!editMode ? (
+          <></>
+        ) : (
+          <button className="btn-add" onClick={this.addTask}>
+            +
+          </button>
+        )}
       </>
     );
   }
