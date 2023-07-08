@@ -6,7 +6,7 @@ class ExperienceItem extends Component {
     super(props);
 
     this.state = {
-      company: "Quorum",
+      company: "Code Company",
       role: "Software Engineer",
       start: "08/2016",
       end: "Present",

@@ -6,8 +6,8 @@ class General extends Component {
 
     this.state = {
       name: "Anthony Hsu",
-      phone: "(281) 935-6783",
-      email: "anthhsu@gmail.com",
+      phone: "(123) 456-7890",
+      email: "user@github.com",
     };
   }
 
