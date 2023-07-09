@@ -1,38 +1,27 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class ExperienceTaskDescription extends Component {
-  constructor(props) {
-    super(props);
+const ExperienceTaskDescription = (props) => {
+  const { editMode, task, editTask } = props;
+  const [text, setText] = useState(task.text);
+  const [id, setId] = useState(task.id);
 
-    this.state = {
-      text: this.props.task.text,
-      id: this.props.task.id,
-    };
-  }
-
-  onInputChange = (e) => {
-    this.setState({
-      text: e.target.value,
-    }, () => {
-        this.props.editTask(this.state.id, this.state.text);
+  const onInputChange = (e) => {
+    setText(e.target.value, () => {
+      editTask(id, text);
     });
   };
-
-  render() {
-    const { editMode } = this.props;
-    const mode = editMode ? "editMode" : "submittedMode";
-    return (
-      <li>
-        <input
-          className={`input-exp-desc ${mode}`}
-          type="text"
-          value={this.state.text}
-          disabled={!editMode}
-          onChange={this.onInputChange}
-        />
-      </li>
-    );
-  }
-}
+  const mode = editMode ? "editMode" : "submittedMode";
+  return (
+    <li>
+      <input
+        className={`input-exp-desc ${mode}`}
+        type="text"
+        value={text}
+        disabled={!editMode}
+        onChange={onInputChange}
+      />
+    </li>
+  );
+};
 
 export default ExperienceTaskDescription;
