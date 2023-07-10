@@ -1,45 +1,29 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import CVForm from "./components/CVForm";
 import "./styles/App.css";
 
-class App extends Component {
-  constructor(props) {
-    super(props)
+const App = () => {
+  const [editMode, setEditMode] = useState(false);
 
-    this.state = {
-       editMode: false,
-    }
+  const btnEditClick = () => {
+    setEditMode(true);
+  };
 
-    this.setEditMode = this.setEditMode.bind();
-  }
+  const btnSubmitClick = () => {
+    setEditMode(false);
+  };
 
-  btnEditClick = () => {
-    this.setEditMode(true);
-  }
-
-  btnSubmitClick = () => {
-    this.setEditMode(false);
-  }
-
-  setEditMode = (editable) => {
-    this.setState({
-      editMode: editable,
-    })
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <div className="form-container">
-          <div className="buttons-container">
-            <button onClick={() => this.btnEditClick()}>Edit</button>
-            <button onClick={() => this.btnSubmitClick()}>Submit</button>
-          </div>
-          <CVForm editMode={this.state.editMode}/>
+  return (
+    <div className="App">
+      <div className="form-container">
+        <div className="buttons-container">
+          <button onClick={() => btnEditClick()}>Edit</button>
+          <button onClick={() => btnSubmitClick()}>Submit</button>
         </div>
+        <CVForm editMode={editMode} />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;

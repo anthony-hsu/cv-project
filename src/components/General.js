@@ -1,61 +1,52 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class General extends Component {
-  constructor(props) {
-    super(props);
+const General = (props) => {
+  const { editMode } = props;
+  const mode = editMode ? "editMode" : "submittedMode";
+  const [name, setName] = useState("Anthony Hsu");
+  const [phone, setPhone] = useState("(123) 456-7890");
+  const [email, setEmail] = useState("user@github.com");
 
-    this.state = {
-      name: "Anthony Hsu",
-      phone: "(123) 456-7890",
-      email: "user@github.com",
-    };
-  }
+  const onPhoneInputChange = (e) => {
+    setPhone(e.target.value);
+  };
+  const onEmailInputChange = (e) => {
+    setEmail(e.target.value);
+  };
 
-  onInputChange = (e) => {
-    this.setState(
-        {
-            [e.target.name]: e.target.value,
-        }
-    )
-  }
-
-  render() {
-    const {editMode} = this.props;
-    const mode = editMode ? "editMode" : "submittedMode";
-    return (
-      <>
-        <form id="form-general">
-          <div id="general-name">
-            <h1>{this.state.name}</h1>
+  return (
+    <>
+      <form id="form-general">
+        <div id="general-name">
+          <h1>{name}</h1>
+        </div>
+        <div id="general-contact">
+          <div>
+            <label>Phone Number: </label>
+            <input
+              type="text"
+              name="phone"
+              value={phone}
+              onChange={onPhoneInputChange}
+              className={mode}
+              disabled={!editMode}
+            />
           </div>
-          <div id="general-contact">
-            <div>
-              <label>Phone Number: </label>
-              <input 
-                type="text"
-                name="phone"
-                value={this.state.phone}
-                onChange={this.onInputChange}
-                className={mode}
-                disabled={!editMode}
-              />
-            </div>
-            <div>
-              <label>Email: </label>
-              <input 
-                type="text"
-                name="email"
-                value={this.state.email}
-                onChange={this.onInputChange}
-                className={mode}
-                disabled={!editMode}
-              />
-            </div>
+          <div>
+            <label>Email: </label>
+            <input
+              type="text"
+              name="email"
+              value={email}
+              onChange={onEmailInputChange}
+              className={mode}
+              disabled={!editMode}
+            />
           </div>
-        </form>
-      </>
-    );
-  }
-}
+        </div>
+      </form>
+    </>
+  );
+};
 
 export default General;
