@@ -4,7 +4,7 @@ const General = (props) => {
   const { editMode } = props;
   const mode = editMode ? "editMode" : "submittedMode";
   const name = "Anthony Hsu";
-  const [phone, setPhone] = useState("(123) 456-7890");
+  const [phone, setPhone] = useState("(321) 456-7890");
   const [email, setEmail] = useState("user@github.com");
 
   const onPhoneInputChange = (e) => {
