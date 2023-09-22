@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CVForm from "./components/CVForm";
+import Button from "@mui/material/Button";
 import "./styles/App.css";
 
 const App = () => {
@@ -17,8 +18,8 @@ const App = () => {
     <div className="App">
       <div className="form-container">
         <div className="buttons-container">
-          <button onClick={() => btnEditClick()}>Edit</button>
-          <button onClick={() => btnSubmitClick()}>Submit</button>
+          <Button variant="contained" disabled={editMode} onClick={() => btnEditClick()}>Edit</Button>
+          <Button variant="contained" disabled={!editMode} onClick={() => btnSubmitClick()}>Save</Button>
         </div>
         <CVForm editMode={editMode} />
       </div>
