@@ -3,11 +3,10 @@ import React, { useState } from "react";
 const ExperienceTaskDescription = (props) => {
   const { editMode, task, editTask } = props;
   const [text, setText] = useState(task.text);
-  const [id, setId] = useState(task.id);
 
   const onInputChange = (e) => {
     setText(e.target.value, () => {
-      editTask(id, text);
+      editTask(task.id, text);
     });
   };
   const mode = editMode ? "editMode" : "submittedMode";
